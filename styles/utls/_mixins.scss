@@ -1,0 +1,27 @@
+@mixin btn_hover_bg_animation($bg-color) {
+  position: relative;
+  transition: all 0.5s ease;
+  z-index: 1;
+  overflow: hidden;
+  &::after {
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: $bg-color;
+    z-index: -1;
+  }
+  &:hover {
+    border-color: $bg-color;
+    &::after {
+      transition: all 0.5s ease;
+      left: 0;
+      right: 0;
+      opacity: 1;
+    }
+  }
+}

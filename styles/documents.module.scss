@@ -1,0 +1,12 @@
+.container {
+  background-color: var(--bs-ai-bg);
+  display: flex;
+  flex: 1;
+}
+.list_docs {
+  background: #fff;
+  border: 1px solid var(--bs-ai-light);
+  border-radius: 4px;
+  overflow-x: scroll;
+  padding: 15px 20px;
+}
